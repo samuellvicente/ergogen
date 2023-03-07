@@ -113,6 +113,7 @@ points:
           padding: 17
       key:
         footprints:
+
 outlines:
   raw:
     - what: rectangle
@@ -153,16 +154,19 @@ pcbs:
           reverse: true
           hotswap: true
       promicro:
-        what: promicro
+        what: promicro_pretty
         where:
           ref: matrix_inner_home
           shift: [19, -8.5]
           rotate: -90
-        params:
-          orientation: down
-      promicro:
-        type: promicro_pretty
+      pcm12:
+        type: pcm12
         anchor:
-          ref: board_pinkie_home
-          shift: [-17, -29.5]
-          rotate: 50
+          ref: thumbfan_home_home
+          shift: [-28, -13.5]
+          rotate: -110
+        nets:
+          from: pos  
+          to: RAW
+        params:
+          reverse: true 
